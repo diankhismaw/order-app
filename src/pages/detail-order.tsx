@@ -1,8 +1,7 @@
-// import '@/styles/globals.css'
-import { FloatingPrice, Item, Nav } from "@/shared/components"
+import { Detail, DetailNav } from "@/shared/components"
 
 
-const Home = () => {
+const DetailOrder = () => {
   const items = [
     {
       title: 'Echante Signature',
@@ -63,17 +62,14 @@ const Home = () => {
   ]
 
   return (
-    <div className='w-full'>
-      <Nav />
+    <>
+      <DetailNav />
       <div className='mt-20 max-w-5xl mx-auto pb-20'>
-        {items.map((item) => <Item {...item} />)}
+        {items.map((item) => <Detail {...item} />)}
       </div>
-      <FloatingPrice />
-    </div>
+    </>
+
   )
 }
 
-export default Home
-
-
-
+export default DetailOrder

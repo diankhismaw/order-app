@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { ReactNode } from "react"
-import { ModalNote } from ".."
+import { ModalTrigger } from "..";
 
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
   description: ReactNode,
   price: ReactNode,
 }
-export const Item = ({alt, description, imageSrc, price, title, }:Props) => {
+export const Item = ({alt, description, imageSrc, price, title}:Props) => {
   return (
     <div className="flex justify-between p-5 shadow-md mb-3">
       <div className="wrap-item flex justify-between">
@@ -26,15 +26,13 @@ export const Item = ({alt, description, imageSrc, price, title, }:Props) => {
           <p className="price">Rp.{price}</p>
         </div>
       </div>
-      <div className="qty">
-        <div className="counter">
-          <span>-</span>
-          <input type="number" />
-          <span>+</span>
-        </div>
-        <div className="notes">
-          <ModalNote triggerLabel={description}/>
-        </div>
+      <div className="btn-modal">
+        <ModalTrigger 
+          title={title}
+          imageSrc= {imageSrc}
+          price= {price}
+          alt= {alt}
+        />
       </div>
     </div>
   )

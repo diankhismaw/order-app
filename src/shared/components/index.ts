@@ -1,3 +1,6 @@
 export * from './navbar'
 export * from './item'
-export * from './modalNote'
+export * from './modal'
+export * from './floatingPrice'
+export * from './button'
+export * from './detail'
