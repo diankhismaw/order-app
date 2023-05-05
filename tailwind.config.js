@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors:{
+        gold: '#c59d5f'
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

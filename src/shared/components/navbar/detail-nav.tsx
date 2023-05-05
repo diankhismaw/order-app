@@ -15,8 +15,9 @@ export const DetailNav = () => {
             width={50}
             height={50}
           />
-          <h2 className='font-sans font-semibold'>Enchantè Coffee</h2>
+          <h2 className='font-sans font-semibold'>Enchantè Coffeeaa</h2>
         </div>
+        lala
       </div>
     </>
   )
