@@ -1,6 +1,6 @@
 import Image from "next/image"
 import React, { useState } from 'react';
-import { ModalTrigger } from "..";
+import { ItemSetter } from "./item-setter";
 
 
 interface Props {
@@ -13,17 +13,7 @@ interface Props {
 
 
 export const Item = ({ id, description, imageSrc, price, title }: Props) => {
-  const [order, setOrder] = useState(0);
-  const handleDown = () => {
-    if (order > 0) {
-      setOrder(order - 1)
-    }
-  }
-  const handleUp = () => {
-    if (order < 20) {
-      setOrder(order + 1)
-    }
-  }
+
   return (
     <div className="flex justify-between p-5 shadow-md mb-3">
       <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-y-3 gap-x-3 w-full max-w-4xl">
@@ -46,11 +36,7 @@ export const Item = ({ id, description, imageSrc, price, title }: Props) => {
             </div>
           </article>
           <div className='absolute bottom-0 right-0'>
-            <div className='flex flex-row w-44 border-4 border-solid border-gold'>
-              <div className='basis-1/4'><button className='bg-gold h-full w-full' onClick={handleDown}>-</button></div>
-              <div className='basis-1/2 text-center'><p className='my-2'>{order} item</p></div>
-              <div className='basis-1/4'><button className='bg-gold h-full w-full' onClick={handleUp}>+</button></div>
-            </div>
+            <ItemSetter />
           </div>
         </div>
       </div>

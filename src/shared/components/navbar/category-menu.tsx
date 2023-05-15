@@ -4,10 +4,11 @@ import Image from 'next/image'
 interface Props {
     categories: string[],
     filterItems: (category: string) => void,
-    scrolled: boolean
+    scrolled: boolean,
+    selectedIndex: number,
 }
-const CategoryMenu = ({ categories, filterItems, scrolled }: Props) => {
-    let [currentCategory, setCurrentCategory] = useState(0);
+const CategoryMenu = ({ categories, filterItems, scrolled, selectedIndex }: Props) => {
+    let [currentCategory, setCurrentCategory] = useState(selectedIndex);
 
     const handleCategoryClick = (categoryIndex: any, category: any) => {
         filterItems(category);

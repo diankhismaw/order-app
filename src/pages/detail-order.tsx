@@ -65,7 +65,7 @@ const DetailOrder = () => {
     <>
       <DetailNav />
       <div className='mt-20 max-w-5xl mx-auto pb-20'>
-        {items.map((item) => <Detail {...item} />)}
+
       </div>
     </>
 
