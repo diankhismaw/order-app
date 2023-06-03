@@ -81,7 +81,7 @@ const Home = () => {
   };
   return (
     <div className='w-full'>
-      <Nav menuFilter={menuFilter} />
+      <Nav menuFilter={menuFilter} categories={['all', 'Coffee', 'Beverage', 'Main Course']} selectedIndex={0} />
       <div className='relative mt-[120px] max-w-lg md:max-w-4xl sm:max-w-lg lg:max-w-4xl mx-auto pb-20'>
         {menuItems.map((item) => <Item key='i' {...item} />)}
       </div>

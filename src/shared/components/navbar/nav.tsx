@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import Image from 'next/image'
 import CategoryMenu from './category-menu'
 
-export const Nav = ({ menuFilter }: { menuFilter: any }) => {
+export const Nav = ({ menuFilter, categories, selectedIndex }: { menuFilter: any, categories: any, selectedIndex: number }) => {
   const [scrolled, setScrolled] = useState(false);
-  const categories = ['all', 'Coffee', 'Beverage', 'Main Course'];
 
   const filterItems = (category: string) => {
     menuFilter(category)
@@ -39,7 +38,7 @@ export const Nav = ({ menuFilter }: { menuFilter: any }) => {
               <h2 className={'font-sans font-semibold text-2xl mt-3' + (scrolled ? ' logo-text-small' : '')}>Enchantè Coffee</h2>
             </div>
           </div>
-          <CategoryMenu categories={categories} filterItems={filterItems} scrolled={scrolled} />
+          <CategoryMenu categories={categories} filterItems={filterItems} scrolled={scrolled} selectedIndex={selectedIndex} />
         </section>
       </div>
 
